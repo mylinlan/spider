@@ -18,12 +18,13 @@ class Mysql(object):
 
     # 数据库初始化
     def __init__(self):
+        self.time = time
         try:
             self.db = MySQLdb.connect(host='localhost', port=3306, user='lin', passwd='lin', db='tianya')
             self.cur = self.db.cursor()
-            self.time = time
         except MySQLdb.Error, e:
             self.__log("链接数据库失败，原因:", e.args[0], e.args[1])
+	    exit()
 
     # 插入数据
     def insert_data(self, table, my_dict):
