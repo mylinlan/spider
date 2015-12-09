@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS `gzrb_titles` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `link` varchar(255) NOT NULL COMMENT '链接',
-  `title` text NOT NULL COMMENT '标题',
+  `title` varchar(255) NOT NULL COMMENT '标题',
   `content` text NOT NULL COMMENT '回复内容',
   `time` datetime default NULL COMMENT '回复时间',
   `click_num` int(11) DEFAULT NULL COMMENT '点击数',
