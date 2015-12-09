@@ -25,7 +25,7 @@ driver = webdriver.Firefox()
 driver.get("http://gz.sina.com.cn/news/msrd/list.shtml")
 
 for x in range(1, 11):
-    time.sleep(2)
+    # time.sleep(2)
     try:
         element = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CLASS_NAME, "more-btn"))
